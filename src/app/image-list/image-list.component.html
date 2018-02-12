@@ -1,0 +1,40 @@
+<div class="utto">
+  <div class="input-group" style="width: 800px; margin: 0 auto;">
+   <div class="input-group-prepend">
+    <span class="input-group-text" id="" (click)="searchImages(searchQuery)">Search Image</span>
+   </div>
+   <input type="text" class="form-control" [(ngModel)]="searchQuery">
+  </div>
+</div>
+
+<p *ngIf="searching">Fetching data . . .</p>
+<hr>
+
+<div *ngFor="let image of images">
+
+
+<div class="gallery">
+  <a target="_blank" href="{{image.webformatURL}}">
+    <img src="{{image.webformatURL}}" widht="500" height="400">
+  </a>
+</div>
+
+</div>
+
+
+
+ <!--<div *ngFor="let image of images">-->
+
+
+     <!--<img class="img-responsive" src="{{image.webformatURL}}">-->
+     <!--<span>Tags: {{image.tags}}</span>-->
+     <!--<span>Comments: {{image.comments}}</span>-->
+     <!--<span>User: {{image.user}}</span>-->
+     <!--<span>Likes: {{image.likes}}</span>-->
+
+
+
+<!--</div>-->
+
+
+
